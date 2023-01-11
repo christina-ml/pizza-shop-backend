@@ -10,6 +10,8 @@ CREATE TABLE pizza_menu (
     name TEXT,
     price SMALLINT,
     image TEXT,
+    toppings TEXT [],
+    tags TEXT [],
     default_order SMALLINT,
     short_description TEXT,
     long_description TEXT
