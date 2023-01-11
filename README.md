@@ -26,3 +26,13 @@ git init
 add gitignore:
 - node_modules/
 - .env
+
+# PG Promise
+```
+npm install pg-promise
+```
+
+# CORS
+```
+npm install cors
+``` 
