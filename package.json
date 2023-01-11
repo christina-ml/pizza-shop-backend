@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "pizza-shop-backend",
+  "description": "Welcome to the pizza shop! We work tirelessly Monday-Sunday 12am-12pm to provide quick, friendly, responsive service to give you an exceptional experience while eating our delicious food. Ready to take orders for pickup. Free delivery can be made within a 1-block radius.",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "author": "Christina Loiacono",
+  "license": "ISC"
+}
