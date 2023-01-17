@@ -13,6 +13,26 @@ const getAllCustomers = async (pizza_id) => {
     }
 };
 
+// Create/Sign up a new customer with a chosen pizza order
+const newCustomer = async (customer) => {
+    try {
+        const newCustomer = await db.one(
+            "INSERT INTO customers (firstname, lastname, email, phone, pizza_id) VALUES ($1, $2, $3, $4, $5) RETURNING *",
+            [
+                customer.firstname,
+                customer.lastname,
+                customer.email,
+                customer.phone,
+                customer.pizza_id,
+            ]
+        );
+        return newCustomer;
+    } catch (err) {
+        return err;
+    }
+}
+
 module.exports = {
-    getAllCustomers
+    getAllCustomers,
+    newCustomer
 };
