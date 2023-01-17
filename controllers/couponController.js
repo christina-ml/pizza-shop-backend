@@ -4,6 +4,7 @@ const {
     getAllValidCoupons
 } = require("../queries/coupons");
 
+// GET - See list of all existing coupons for each pizza, if any.
 // Test the url: http://localhost:9000/pizzas/2/coupons , http://localhost:9000/pizzas/1/coupons
 coupons.get("/", async (req, res) => {
     try {
