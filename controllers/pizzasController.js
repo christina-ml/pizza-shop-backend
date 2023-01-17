@@ -1,12 +1,19 @@
 const express = require("express");
-const pizza = express.Router();
+const pizzas = express.Router();
 const {
     getAllPizzas,
     getOnePizzaById
 } = require("../queries/pizzas.js");
 
-// get all pizza
-pizza.get("/", async (req, res)=> {
+// TO DO:
+// create customers for each pizza
+const customersController = require("./customersController.js");
+pizzas.use("/:pizzaId/customers", customersController);
+
+// delivery
+
+// get all pizzas
+pizzas.get("/", async (req, res)=> {
     try {
         const allPizza = await getAllPizzas();
         if (allPizza[0]){
@@ -20,7 +27,7 @@ pizza.get("/", async (req, res)=> {
 });
 
 // get one pizza by id of {id}
-pizza.get("/:id", async(req, res) => {
+pizzas.get("/:id", async(req, res) => {
     const { id } = req.params;
     try{
         const onePizza = await getOnePizzaById(id);
@@ -34,4 +41,4 @@ pizza.get("/:id", async(req, res) => {
     }
 });
 
-module.exports = pizza;
+module.exports = pizzas;

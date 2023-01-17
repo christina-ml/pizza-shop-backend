@@ -17,3 +17,14 @@ CREATE TABLE pizza_menu (
     short_description TEXT,
     long_description TEXT
 );
+
+DROP TABLE IF EXISTS customers;
+
+CREATE TABLE customers (
+    cid SERIAL PRIMARY KEY,
+    firstname TEXT,
+    lastname TEXT,
+    email TEXT,
+    phone TEXT,
+    pizza_id INTEGER REFERENCES pizza_menu(id) ON DELETE CASCADE
+);

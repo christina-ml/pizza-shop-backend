@@ -11,7 +11,7 @@ const pizzasController = require('./controllers/pizzasController.js');
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use("/pizza", pizzasController);
+app.use("/pizzas", pizzasController);
 
 // Routes
 app.get("/", (_req, res) => {
