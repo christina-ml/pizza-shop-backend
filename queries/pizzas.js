@@ -1,7 +1,7 @@
 const db = require("../db/dbConfig.js");
 
 // get all pizza
-const getAllPizza = async() => {
+const getAllPizzas = async() => {
     try {
         const allPizza = await db.any("SELECT * FROM pizza_menu");
         return allPizza;
@@ -11,7 +11,7 @@ const getAllPizza = async() => {
 }
 
 // get one pizza by id of {id}
-const getOnePizza = async(id) => {
+const getOnePizzaById = async(id) => {
     try{
         const onePizza = await db.one("SELECT * FROM pizza_menu WHERE id=$1", id);
         return onePizza;
@@ -21,6 +21,6 @@ const getOnePizza = async(id) => {
 };
 
 module.exports = {
-    getAllPizza,
-    getOnePizza
+    getAllPizzas,
+    getOnePizzaById
 }

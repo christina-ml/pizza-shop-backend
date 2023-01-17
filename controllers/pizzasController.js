@@ -1,14 +1,14 @@
 const express = require("express");
 const pizza = express.Router();
 const {
-    getAllPizza,
-    getOnePizza
-} = require("../queries/pizza.js");
+    getAllPizzas,
+    getOnePizzaById
+} = require("../queries/pizzas.js");
 
 // get all pizza
 pizza.get("/", async (req, res)=> {
     try {
-        const allPizza = await getAllPizza();
+        const allPizza = await getAllPizzas();
         if (allPizza[0]){
             res.status(200).json(allPizza);
         } else {
@@ -23,7 +23,7 @@ pizza.get("/", async (req, res)=> {
 pizza.get("/:id", async(req, res) => {
     const { id } = req.params;
     try{
-        const onePizza = await getOnePizza(id);
+        const onePizza = await getOnePizzaById(id);
         if(onePizza.id){
             res.status(200).json(onePizza);
         } else {

@@ -7,6 +7,7 @@ DROP TABLE IF EXISTS pizza_menu;
 
 CREATE TABLE pizza_menu (
     id SERIAL PRIMARY KEY,
+    uuid TEXT UNIQUE NOT NULL,
     name TEXT,
     price SMALLINT,
     image TEXT,

@@ -6,16 +6,16 @@ const cors = require("cors");
 const app = express();
 
 // Controllers
-const pizzaController = require('./controllers/pizzaController.js');
+const pizzasController = require('./controllers/pizzasController.js');
 
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use("/pizza", pizzaController);
+app.use("/pizza", pizzasController);
 
 // Routes
 app.get("/", (_req, res) => {
-    res.send("Welcome to the pizza shop backend!");
+    res.status(200).json({ message: 'Pizza shop backend is running' });
 })
 
 app.get("*", (_req, res) => {

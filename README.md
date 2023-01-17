@@ -36,3 +36,24 @@ npm install pg-promise
 ```
 npm install cors
 ``` 
+
+## Resources
+
+Array data type PostgreSQL:
+Insert PostgreSQL array values -
+https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-array/
+
+## Seed data
+A universally unique identifier (UUID) is a 128-bit label used for information in computer systems. The term globally unique identifier (GUID) is also used.
+
+Creating the UUID `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` format: 
+[Online UUID Generator](https://www.uuidgenerator.net/version1)
+
+
+
+# Frontend
+## Create React App
+```
+npx create-react-app <app name here>
+```
+
