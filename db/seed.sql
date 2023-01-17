@@ -15,3 +15,6 @@ INSERT INTO customers (firstname, lastname, email, phone, pizza_id) VALUES
 ('Lucy', 'Chapman', 'lucy74@.shakeshack.edu', '(212) 555-1230', 3),
 ('Zoe', 'Baker', 'zoebaker@.pastrychef.com', '(212) 555-1229', 4),
 ('Vanessa', 'Hayes', 'vhayes@krispykreme.com', '(212) 555-1228', 4);
+
+INSERT INTO coupons (valid_coupon, coupon_pizza_id) VALUES
+('f5934334-b237-4aa2-98cd-4330a00e1659', 2);

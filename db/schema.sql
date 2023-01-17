@@ -28,3 +28,11 @@ CREATE TABLE customers (
     phone TEXT,
     pizza_id INTEGER REFERENCES pizza_menu(id) ON DELETE CASCADE
 );
+
+DROP TABLE IF EXISTS coupons;
+
+CREATE TABLE coupons (
+    couponid SERIAL PRIMARY KEY,
+    valid_coupon TEXT REFERENCES pizza_menu(uuid) ON DELETE CASCADE,
+    coupon_pizza_id INTEGER REFERENCES pizza_menu(id) ON DELETE CASCADE
+);

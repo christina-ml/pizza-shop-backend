@@ -10,7 +10,9 @@ const {
 const customersController = require("./customersController.js");
 pizzas.use("/:pizzaId/customers", customersController);
 
-// delivery
+// coupon
+const couponController = require("./couponController.js");
+pizzas.use("/:pizzaId/coupons", couponController);
 
 // get all pizzas
 pizzas.get("/", async (req, res)=> {
